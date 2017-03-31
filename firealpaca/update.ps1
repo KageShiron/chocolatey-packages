@@ -17,13 +17,13 @@ function au_BeforeUpdate() {
         Referer = 'http://firealpaca.com/';
       
     }
+    $fn = [System.IO.Path]::GetTempFileName()
 
     Invoke-WebRequest -Headers $options -uri $Latest.URL32 -OutFile $fn -UseBasicParsing
-    $res = Get-FileHash $fn -Algorithm $Algorithm  | % Hash
+    $res = Get-FileHash $fn -Algorithm sha256 | % Hash
     rm $fn -ea ignore
-    return $res.ToLower()
 
-    $Latest.Checksum32 = Get-RemoteChecksum $Latest.Url32
+    $Latest.Checksum32 = $res.ToLower()
 }
 
 function global:au_SearchReplace {
