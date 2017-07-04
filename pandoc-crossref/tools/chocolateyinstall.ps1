@@ -2,6 +2,7 @@
 $packageName = 'pandoc-crossref'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url = 'https://github.com/lierdakil/pandoc-crossref/releases/download/v0.2.5.0/windows-ghc8-pandoc1-19.zip'
+
 $packageArgs = @{
     packageName   = $packageName
     unzipLocation = $toolsDir

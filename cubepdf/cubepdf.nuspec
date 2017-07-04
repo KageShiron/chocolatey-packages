@@ -47,9 +47,13 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
-    <tags>cubepdf pdf print cubesoft</tags>
-    <summary>Save documents as PDF</summary>
-    <description>Save documents as PDF</description>
+    <tags>cubepdf pdf print cubesoft admin</tags>
+    <summary>A simple virtual printer for making PDFs and images.</summary>
+    <description>A simple virtual printer for making PDFs and images.
+    You can save documents as many formats.
+
+    Output formats: PDF , Vector Image(PS,EPS) and Bitmap Image(PNG,JPEG,BMP,TIFF)
+    </description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
     <!-- =============================== -->      
 

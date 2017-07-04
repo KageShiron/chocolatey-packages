@@ -16,7 +16,9 @@
     <bugTrackerUrl>https://github.com/lierdakil/pandoc-crossref/issues</bugTrackerUrl>
     <tags>pandoc-crossref admin pandoc latex pdf markdown</tags>
     <summary>pandoc-crossref is a pandoc filter for numbering figures, equations, tables and cross-references to them.</summary>
-    <description>pandoc-crossref is a pandoc filter for numbering figures, equations, tables and cross-references to them.</description>
+    <description>pandoc-crossref is a pandoc filter for numbering figures, equations, tables and cross-references to them.
+
+You can install pandoc by chocolatey. [Chocolatey Gallery | Pandoc 1.19.2.1](https://chocolatey.org/packages/pandoc)</description>
     <releaseNotes>https://github.com/lierdakil/pandoc-crossref/releases</releaseNotes>
   </metadata>
   <files>

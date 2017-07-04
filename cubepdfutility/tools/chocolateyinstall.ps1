@@ -15,9 +15,9 @@ $packageArgs = @{
 
   softwareName  = 'cubepdf*'
 
-  checksum      = 'a167852870fd2b6d7a4a65c67db8bfa5784bc265c616b63cd1f263a4acf0049b'
+  checksum      = 'b18a6a7e68bdecb08a9f3201138814cf7902c49f0f8342cd29bb406f4758c666'
   checksumType  = 'sha256'
-  checksum64    = '15872259648e1577cd25994d1c39550ee08671b473cf537349424073c7c8ce34'
+  checksum64    = '940e2f47cdfd56ef8cd67efd84419b407d25022743f4d278b6570ce490ae7126'
   checksumType64= 'sha256'
 
   silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
