@@ -1,4 +1,4 @@
-# usamimi-harricane
+# usamimi-hurricane
 ![アイコン](icon.png)
 うさみみハリケーン
 
