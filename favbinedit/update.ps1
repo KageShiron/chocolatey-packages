@@ -1,6 +1,9 @@
-﻿$releases = 'http://www.vector.co.jp/download/file/winnt/util/fh683392.html'
+﻿$infopage_url = 'http://www.vector.co.jp/soft/dl/winnt/util/se504539.html'
 
 function global:au_GetLatest {
+    $infopage = Invoke-WebRequest -Uri $infopage_url
+    $releases = 'http://www.vector.co.jp' + ($infopage.links | ? class -eq "btn download" | select -First 1 -expand href )
+
     $download_page = Invoke-WebRequest -Uri $releases
     $regex   = 'http://ftp.vector.co.jp/.*?\.exe$'
     $url     = ($download_page.links | ? href -match $regex | select -First 1 -expand href)

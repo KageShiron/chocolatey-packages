@@ -1,9 +1,13 @@
-﻿$releases = 'http://www.vector.co.jp/download/file/win95/prog/fh682302.html'
+﻿$infopage_url = 'http://www.vector.co.jp/soft/dl/win95/prog/se375830.html'
 
 function global:au_GetLatest {
+    $infopage = Invoke-WebRequest -Uri $infopage_url
+    $releases = 'http://www.vector.co.jp' + ($infopage.links | ? class -eq "btn download" | select -First 1 -expand href )
+
     $download_page = Invoke-WebRequest -Uri $releases
     $regex   = 'http://ftp.vector.co.jp/.*?\.zip$'
-    $url     = ($download_page.links | ? href -match $regex | select -First 1 -expand href)
+    $url     =  ($download_page.links | ? href -match $regex | select -First 1 -expand href)
+    
     
     $download_page.RawContentStream.Position = 0
     $sjis = (New-Object IO.StreamReader($download_page.RawContentStream, [System.Text.Encoding]::GetEncoding("Shift_JIS"))).ReadToEnd()
