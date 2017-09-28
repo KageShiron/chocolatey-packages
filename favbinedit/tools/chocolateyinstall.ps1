@@ -4,7 +4,7 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'favbinedit'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://ftp.vector.co.jp/69/35/3447/FavBinEdit-1-1-9.exe'
+$url        = 'http://ftp.vector.co.jp/69/46/3447/FavBinEdit-1-2-0.exe'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -14,7 +14,7 @@ $packageArgs = @{
 
   softwareName  = 'FavBinEdit*'
 
-  checksum      = '9634c298991bdb261ee2293ae4938c9f1b122746bf219051e803229c6c606a15'
+  checksum      = '1fc37ea29a66aae99deb2ab63ac906866885d34b416abb0f76d3c52c2b2a58c5'
   checksumType  = 'sha256'
 
   silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
