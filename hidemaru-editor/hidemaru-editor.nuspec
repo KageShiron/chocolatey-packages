@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hidemaru-editor</id>
-    <version>8.75</version>
+    <version>8.75.0.20171021</version>
     <packageSourceUrl>https://github.com/KageShiron/chocolatey-packages/hidemaru-editor</packageSourceUrl>
     <owners>KageShiron</owners>
     <title>Hidemaru Editor</title>
