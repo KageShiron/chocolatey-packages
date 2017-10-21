@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>hidemaru-editor</id>
+    <version>8.75</version>
+    <packageSourceUrl>https://github.com/KageShiron/chocolatey-packages/hidemaru-editor</packageSourceUrl>
+    <owners>KageShiron</owners>
+    <title>Hidemaru Editor</title>
+    <authors>有限会社サイトー企画 SAITO-KIKAKU CORPORATION | 斉藤 秀夫 Hideo Saito </authors>
+    <projectUrl>http://hide.maruo.co.jp/software/hidemaru.html</projectUrl>
+    <iconUrl>https://rawgit.com/KageShiron/chocolatey-packages/master/hidemaru-editor/icon.gif</iconUrl>
+    <copyright>Copyright 有限会社サイトー企画 SAITO-KIKAKU CORPORATION | 斉藤 秀夫 Hideo Saito </copyright>
+    <tags>hidemaru-editor admin texteditor hidemaru editor</tags>
+    <summary>A texteditor made in japan.</summary>
+    <description>A texteditor made in japan.
+
+Features
+* Japanese Support
+* Tab
+* Macro
+* Syntax Highlight
+* Code folding
+* Vertical writing
+
+etc...
+
+## Paramaters
+See ![Silent Install Options](http://hide.maruo.co.jp/swreg/corporation_silent.html).
+
+Example:
+
+`cinst -y hidemaru-editor --params "'/key:XXXXXXX /name:yourname /exit'"
+
+* **output** Log file path
+* **dir** Install directory
+* **key** License key
+* **name** License user name
+* **exit** Exit all instances of Hidemaru Editor.
+
+You can choose a version of Hidemaru Editor.
+
+* **type** install type
+  * **32** (defualt) 32bit version
+  * **32e** 32bit English version
+  * **32f** 32bit float version
+  * **64**  64bit version
+  * **64e** 64bit English version
+  * **64f** 64bit float version
+
+## Known issue
+* Silent uninstallation is not supported.
+</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
