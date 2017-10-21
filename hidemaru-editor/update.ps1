@@ -27,7 +27,7 @@ function global:au_GetLatest {
     
 }
 
-function au_BeforeUpdate() {
+function global:au_BeforeUpdate() {
     $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32
     $Latest.checksum32E = Get-RemoteChecksum $Latest.URL32E
     $Latest.Checksum32F = Get-RemoteChecksum $Latest.URL32F
