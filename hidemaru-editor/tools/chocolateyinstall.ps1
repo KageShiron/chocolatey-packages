@@ -19,12 +19,12 @@ $types = @{
     'url64e'      = 'http://hide.maruo.co.jp/software/bin3/maruo875_x64_signed.exe'
     'url64f'      = 'http://hide.maruo.co.jp/software/bin3/hmfloat875_x64_signed.exe'
     
-    'checksum32'  = ''
-    'checksum32e' = ''
-    'checksum32f' = ''
-    'checksum64'  = ''
-    'checksum64e' = ''
-    'checksum64f' = ''
+    'checksum32'  = 'bed25bc14f231159933cdbc060da40618f284fb57633f256891e340077d7080d'
+    'checksum32e' = 'eb81f28a7bff77ceaf147bc8855d7399ba7ac9b5f33010322064bddb6a0bc8f4'
+    'checksum32f' = '649507219f573599d79f4370f0b2f647dd6176fd6f8d03578df4c7e8c22effcf'
+    'checksum64'  = 'a7fa8d387a5bd445d31c6f1396db0f66f536a0c8c9854458f03bdb174f8356fd'
+    'checksum64e' = '62f8e16d62d13435a07cae88b1cddc5492001811aa4b84cb960603dec860d32e'
+    'checksum64f' = '8aecb7c4e9622487dadb49c59f10246f159122a9727e776ab7b0656d1ed6913e'
 }
 
 $url = $types["url" + $hmtype]
