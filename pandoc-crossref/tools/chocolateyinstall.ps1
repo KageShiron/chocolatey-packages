@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 $packageName = 'pandoc-crossref'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url = 'https://github.com/lierdakil/pandoc-crossref/releases/download/v0.2.6.0/windows-ghc8-pandoc1-19.zip'
+$url = 'https://github.com/lierdakil/pandoc-crossref/releases/download/v0.2.7.0/windows-ghc8-pandoc1-19.zip'
 
 $packageArgs = @{
     packageName   = $packageName
@@ -10,7 +10,7 @@ $packageArgs = @{
 
     softwareName  = 'pandoc-crossref*'
 
-    checksum      = '8ec96ff50cfe8e5461eac742461604412d577f49f6f3d6e92ad2fe24b1fe57a5'
+    checksum      = 'd1fcbdf76f251412d53a2a328cebee211f4235b057b8268a36b5b5d3d33351c3'
     checksumType  = 'sha256'
 
 }
