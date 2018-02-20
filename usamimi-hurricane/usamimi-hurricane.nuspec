@@ -26,7 +26,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>0.26.0.20170724</version>
+    <version>0.27</version>
     <packageSourceUrl>https://github.com/KageShiron/chocolatey-packages/tree/master/usamimi-hurricane</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>KageShiron</owners>
@@ -49,13 +49,20 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!--<bugTrackerUrl></bugTrackerUrl>-->
     <tags>usamimi-hurricane process analyze debug memory assembly</tags>
     <summary>Multifunctional process memory editor for general use.</summary>
-    <description>Multifunctional process memory editor for general use.
+    <description><![CDATA[うさみみハリケーン
 
+## icon.pngについて(About icon.png)
+icon.pngはこのパッケージによってインストールされるソフトウェアのから取得したものを引用しています。このアイコンのライセンスはソフトウェアの作者に帰属し、レポジトリの管理者は著作権を有しおらず、**MITライセンスの対象外**であることにご注意ください。
 
-**Please Note**: This is an automatically updated package. If you find it is 
-out of date by more than a day or two, please contact the maintainer(s) and
-let them know the package is no longer updating correctly.
-</description>
+icon.pngの著作権者の情報はusamimi-hurricane.nuspecにファイル含まれています。
+
+-----
+icon.png is quoted from the software installed by this packaged.  
+The maintainer of this chocolatey package and this repository have no copyright.  
+Note that icon.png **IS NOT** provided with MIT License.
+
+usamimi-hurricane.nuspec has the information about Copyright holder of icon.png.
+]]></description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
     <!-- =============================== -->      
 

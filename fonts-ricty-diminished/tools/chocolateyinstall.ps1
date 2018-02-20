@@ -3,7 +3,7 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'fonts-ricty-diminished'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url = 'http://www.rs.tus.ac.jp/yyusa/ricty_diminished/ricty_diminished-4.1.0.tar.gz'
+$url = 'http://www.rs.tus.ac.jp/yyusa/ricty_diminished/ricty_diminished-4.1.1.tar.gz'
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
@@ -12,7 +12,7 @@ $packageArgs = @{
 
   softwareName  = 'fonts-ricty-diminished*'
 
-  checksum      = '468492dd51d5027eeb34479549bc8aceef9d0900f377ebc75a2b21a6a3403066'
+  checksum      = '09d6cf8eaf3402205dd8a0fa35469d41833b4e85bedddfac235255d78747766b'
   checksumType  = 'sha256'
 }
 

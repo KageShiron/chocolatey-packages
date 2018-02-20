@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>favbinedit</id>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
     <packageSourceUrl>https://github.com/KageShiron/chocolatey-packages/tree/master/favbinedit</packageSourceUrl>
     <owners>KageShiron</owners>
     <title>FavBinEdit</title>
@@ -11,12 +11,20 @@
     <iconUrl>https://rawgit.com/KageShiron/chocolatey-packages/master/favbinedit/icon.png</iconUrl>
     <tags>favbinedit hex edit binary file editor admin</tags>
     <summary>Hex editor for windows.</summary>
-    <description>Hex editor for windows. FavBinEdit can open any files smoothly.
+    <description><![CDATA[FavBinEdit
 
-**Please Note**: This is an automatically updated package. If you find it is 
-out of date by more than a day or two, please contact the maintainer(s) and
-let them know the package is no longer updating correctly.
-</description>
+## icon.pngについて(About icon.png)
+icon.pngはこのパッケージによってインストールされるソフトウェアのから取得したものを引用しています。このアイコンのライセンスはソフトウェアの作者に帰属し、レポジトリの管理者は著作権を有しおらず、**MITライセンスの対象外**であることにご注意ください。
+
+icon.pngの著作権者の情報はfavbinedit.nuspecにファイル含まれています。
+
+-----
+icon.png is quoted from the software installed by this packaged.  
+The maintainer of this chocolatey package and this repository have no copyright.  
+Note that icon.png **IS NOT** provided with MIT License.
+
+favbinedit.nuspec has the information about Copyright holder of icon.png.
+]]></description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
