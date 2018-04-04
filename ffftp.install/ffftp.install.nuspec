@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>ffftp.install</id>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/KageShiron/chocolatey-packages/ffftp</packageSourceUrl>
+    <owners>KageShiron</owners>
+    <title>FFFTP</title>
+    <authors>sayurin</authors>
+    <projectUrl>https://github.com/sayurin/ffftp</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/sayurin/ffftp/master/Resource/icon1.ico</iconUrl>
+    <copyright>Sota &amp; cooperators, FFFTP Project , KURATA SAYURI</copyright>
+    <licenseUrl>https://github.com/sayurin/ffftp/blob/master/doc/ffftp.en.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/sayurin/ffftp</projectSourceUrl>
+    <docsUrl>https://github.com/sayurin/ffftp/tree/master/doc</docsUrl>
+    <bugTrackerUrl>https://github.com/sayurin/ffftp/issues</bugTrackerUrl>
+    <tags>FTP FFFTP admin</tags>
+    <summary>FTP client software with GUI</summary>
+    <description>FTP client software with GUI.
+Support japanese completely.
+
+日本語に対応したGUIのFTPクライアントです。</description>
+    <releaseNotes>English : https://github.com/sayurin/ffftp/blob/master/doc/history.en.txt
+Japanese : https://github.com/sayurin/ffftp/blob/master/doc/history.ja.txt</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

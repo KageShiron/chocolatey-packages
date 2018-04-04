@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>ffftp.portable</id>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/KageShiron/chocolatey-packages/ffftp</packageSourceUrl>
+    <owners>KageShiron</owners>
+    <title>FFFTP</title>
+    <authors>sayurin</authors>
+    <projectUrl>https://github.com/sayurin/ffftp</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/sayurin/ffftp/master/Resource/icon1.ico</iconUrl>
+    <copyright>Sota &amp; cooperators, FFFTP Project , KURATA SAYURI</copyright>
+    <licenseUrl>https://github.com/sayurin/ffftp/blob/master/doc/ffftp.en.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/sayurin/ffftp</projectSourceUrl>
+    <docsUrl>https://github.com/sayurin/ffftp/tree/master/doc</docsUrl>
+    <bugTrackerUrl>https://github.com/sayurin/ffftp/issues</bugTrackerUrl>
+    <tags>FTP FFFTP</tags>
+    <summary>FTP client software with GUI</summary>
+    <description>FTP client software with GUI.
+Support japanese completely.
+
+Note: By default, FFFTP saves a setting file (ffftp.ini) in the same directory as the executable file. I do NOT recommend installg this where you need administrator priviledges.
+see https://github.com/chocolatey/choco/wiki/installation#non-administrative-install
+or use `ffftp.install` package.
+
+日本語に対応したGUIのFTPクライアントです。
+注意: FFFTPはデフォルトで実行ファイルと同一の場所にffftp.iniという設定ファイルを作成しようとします。
+管理者権限が不要な場所にインストールするか、`ffftp.install`のパッケージを利用することを推奨します。  
+環境変数`ChocolateyInstall`を設定することでインストール先を変更できます。
+https://github.com/chocolatey/choco/wiki/installation#non-administrative-install
+</description>
+    <releaseNotes>English : https://github.com/sayurin/ffftp/blob/master/doc/history.en.txt
+Japanese : https://github.com/sayurin/ffftp/blob/master/doc/history.ja.txt</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
