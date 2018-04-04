@@ -2,14 +2,19 @@
 ![FavBinEdit](icon.png)
 FavBinEdit
 
-## icon.pngについて(About icon.png)
-icon.pngはこのパッケージによってインストールされるソフトウェアのから取得したものを引用しています。このアイコンのライセンスはソフトウェアの作者に帰属し、レポジトリの管理者は著作権を有しおらず、**MITライセンスの対象外**であることにご注意ください。
+## About icon.png
+icon.png is not under MIT License
 
-icon.pngの著作権者の情報はfavbinedit.nuspecにファイル含まれています。
 
------
-icon.png is quoted from the software installed by this packaged.  
-The maintainer of this chocolatey package and this repository have no copyright.  
-Note that icon.png **IS NOT** provided with MIT License.
 
-favbinedit.nuspec has the information about Copyright holder of icon.png.
+<!-- 10 -->
+FavBinEdit is a hex editor for windows. FavBinEdit can open any files smoothly.
+
+* Large file edit (more than 4GB)
+* Many encodings (ASCII, EUC, JIS, SJIS, UCS-2, UCS-4, UTF-7, UTF-8, UTF-16(LE), UTF-16(BE), UTF-32(LE), UTF-32(BE))
+* GREP
+* Customizing keymap and toolbar.
+
+**Please Note**: This is an automatically updated package. If you find it is 
+out of date by more than a day or two, please contact the maintainer(s) and
+let them know the package is no longer updating correctly.

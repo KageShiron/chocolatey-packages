@@ -55,6 +55,10 @@ function global:au_SearchReplace {
         }
     }
 }
+function global:au_AfterUpdate ($Package)  {
+    Set-DescriptionFromReadme $Package -SkipFirst 10
+}
+
 
 
 update -ChecksumFor none

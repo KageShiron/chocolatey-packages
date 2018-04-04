@@ -1,15 +1,19 @@
-# usamimi-hurricane
-![アイコン](icon.png)
+# ![アイコン](icon.png) usamimi-hurricane
 うさみみハリケーン
 
-## icon.pngについて(About icon.png)
-icon.pngはこのパッケージによってインストールされるソフトウェアのから取得したものを引用しています。このアイコンのライセンスはソフトウェアの作者に帰属し、レポジトリの管理者は著作権を有しおらず、**MITライセンスの対象外**であることにご注意ください。
+icon.gif IS NOT provided with MIT License.
 
-icon.pngの著作権者の情報はusamimi-hurricane.nuspecにファイル含まれています。
 
------
-icon.png is quoted from the software installed by this packaged.  
-The maintainer of this chocolatey package and this repository have no copyright.  
-Note that icon.png **IS NOT** provided with MIT License.
 
-usamimi-hurricane.nuspec has the information about Copyright holder of icon.png.
+
+---
+<!-- 10 -->
+Usamimi Hurricane is multifunctional process memory editor for general use.
+
+* Process Memory Editor
+* Debugger
+* File analyzer (PE Header,Yara etc...)
+
+**Please Note**: This is an automatically updated package. If you find it is 
+out of date by more than a day or two, please contact the maintainer(s) and
+let them know the package is no longer updating correctly.

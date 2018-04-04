@@ -16,4 +16,4 @@ function global:au_SearchReplace {
 }
 
 
-Update-Package
+update -ChecksumFor none
