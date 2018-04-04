@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>sakuraeditor</id>
-    <version>0.0.0.0</version>
+    <version>2.3.2.0</version>
     <packageSourceUrl>https://github.com/KageShiron/chocolatey-packages/tree/master/sakuraeditor</packageSourceUrl>
     <owners>KageShiron</owners>
     <title>Sakura Editor</title>
@@ -15,7 +15,7 @@
     <docsUrl>http://sakura-editor.sourceforge.net/</docsUrl>
     <tags>sakuraeditor admin sakura editor texteditor japanese</tags>
     <summary>A free Japanese text editor for Windows</summary>
-    <description>A free Japanese text editor for Windows (Unicode Edition).
+    <description><![CDATA[A free Japanese text editor for Windows (Unicode Edition).
 
 **Package Installer Version** 2.2.0.1
 
@@ -89,8 +89,7 @@ cinst -y sakuraeditor --params "'/Tasks:!quicklaunch,fileassoc'"
 
 このオプションで指定した内容が以下のInno Setupの/TASKSに指定されます。  
 [Inno Setup Help](http://www.jrsoftware.org/ishelp/index.php?topic=setupcmdline)
-
-</description>
+]]></description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
