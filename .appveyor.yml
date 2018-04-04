@@ -22,7 +22,8 @@ environment:
   # Github token to commit pushed packages to repository
   github_user_repo: KageShiron/chocolatey-packages
   github_api_key:
-    secure: EpBcCRasqCDEoP0aCzT0c/Q2gRUAtuAP6O4Diqw0Oia73ZEzgkQkMBIjJkju837D
+    secure: MQHJMOQhM1Vl3aAhdadYX2PyTChRqHt35dSkfOL+XeF+jlbkIaPbylHHBf7Gqly0
+    #secure: EpBcCRasqCDEoP0aCzT0c/Q2gRUAtuAP6O4Diqw0Oia73ZEzgkQkMBIjJkju837D
 
 
   # Mail credentials - for error notifications
