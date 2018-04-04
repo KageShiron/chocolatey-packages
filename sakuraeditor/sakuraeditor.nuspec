@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>sakuraeditor</id>
-    <version>2.3.2.0</version>
+    <version>0.0.0.0</version>
     <packageSourceUrl>https://github.com/KageShiron/chocolatey-packages/tree/master/sakuraeditor</packageSourceUrl>
     <owners>KageShiron</owners>
     <title>Sakura Editor</title>
