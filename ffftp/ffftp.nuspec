@@ -3,7 +3,7 @@
   <metadata>
     <id>ffftp</id>
     <version>3.0</version>
-    <packageSourceUrl>https://github.com/KageShiron/chocolatey-packages/ffftp</packageSourceUrl>
+    <packageSourceUrl>https://github.com/KageShiron/chocolatey-packages/tree/master/ffftp</packageSourceUrl>
     <owners>KageShiron</owners>
     <title>FFFTP</title>
     <authors>sayurin</authors>

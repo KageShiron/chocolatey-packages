@@ -2,10 +2,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ffftp.portable</id>
-    <version>3.0</version>
-    <packageSourceUrl>https://github.com/KageShiron/chocolatey-packages/ffftp</packageSourceUrl>
+    <version>3.0.0.20180410</version>
+    <packageSourceUrl>https://github.com/KageShiron/chocolatey-packages/tree/master/ffftp.portable</packageSourceUrl>
     <owners>KageShiron</owners>
-    <title>FFFTP</title>
+    <title>FFFTP.portable</title>
     <authors>sayurin</authors>
     <projectUrl>https://github.com/sayurin/ffftp</projectUrl>
     <iconUrl>https://cdn.rawgit.com/sayurin/ffftp/master/Resource/icon1.ico</iconUrl>
