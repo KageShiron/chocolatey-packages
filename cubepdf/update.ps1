@@ -2,7 +2,7 @@
 function global:au_GetLatest {
     $version = (Invoke-WebRequest https://api.github.com/repos/cube-soft/CubePdf/tags -UseBasicParsing | ConvertFrom-Json)[0].name -replace "-rc","."
     return @{ 
-        Version = $version;
+        Version = $version+"0";
         URL32 = "http://www.cube-soft.jp/cubepdf/dl.php?mode=x86";
         URL64 = "http://www.cube-soft.jp/cubepdf/dl.php?mode=x64"
         ChecksumType32 = 'sha256'
