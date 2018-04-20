@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>limechat</id>
+    <version>2.40</version>
+    <packageSourceUrl>https://github.com/KageShiron/chocolatey-packages/tree/master/limechat</packageSourceUrl>
+    <owners>KageShiron</owners>
+    <title>LimeChat</title>
+    <authors>Psychs</authors>
+    <iconUrl>https://rawgit.com/KageShiron/chocolatey-packages/master/limechat/icon.png</iconUrl>
+    <projectUrl>http://limechat.net/</projectUrl>
+    <copyright>Psychs</copyright>
+    <tags>irc chat limechat japanese irclient</tags>
+    <summary>LimeChat is a IRC client made in Japan.</summary>
+    <description>LimeChat is a IRC client made in Japan.</description>
+    <releaseNotes>http://limechat.net/history</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
