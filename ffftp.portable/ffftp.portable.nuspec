@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ffftp.portable</id>
-    <version>3.0.0.20180410</version>
+    <version>3.2</version>
     <packageSourceUrl>https://github.com/KageShiron/chocolatey-packages/tree/master/ffftp.portable</packageSourceUrl>
     <owners>KageShiron</owners>
     <title>FFFTP.portable</title>
