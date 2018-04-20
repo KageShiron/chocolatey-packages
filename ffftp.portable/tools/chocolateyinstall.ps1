@@ -2,7 +2,7 @@
 $ErrorActionPreference = 'Stop';
 
 $packageName= 'ffftp.portable'
-$toolsDir   = Join-Path ($env:ChocolateyToolsLocation) $packageName
+$toolsDir   = Join-Path (Get-ToolsLocation) $packageName
 $url        = 'https://github.com/sayurin/ffftp/releases/download/v3.0/ffftp-v3.0-x86.zip'
 $url64      = 'https://github.com/sayurin/ffftp/releases/download/v3.0/ffftp-v3.0-x64.zip'
 $ErrorActionPreference = 'Stop';
