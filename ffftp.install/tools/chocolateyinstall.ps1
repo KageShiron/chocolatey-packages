@@ -12,6 +12,7 @@ $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
   fileType      = 'msi'
+  silentArgs     = "/quiet /norestart"
   url           = $url
   url64           = $url64
   softwareName  = 'FFFTP'
