@@ -1,6 +1,6 @@
 
 function global:au_GetLatest {
-    $rel = (Invoke-WebRequest https://api.github.com/repos/sayurin/ffftp/releases -UseBasicParsing | ConvertFrom-Json);
+    $rel = (Invoke-WebRequest https://api.github.com/repos/sayurin/ffftp/releases -UseBasicParsing | ConvertFrom-Json)[0];
     $x86zip = "";
     $x64zip = "";
     $x86msi = "";
