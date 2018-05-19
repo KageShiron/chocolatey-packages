@@ -2,7 +2,7 @@
 
 $packageName= 'usamimi-hurricane'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://ftp.vector.co.jp/69/64/2117/UsaMimi_v027.zip'
+$url        = 'http://ftp.vector.co.jp/70/35/2117/UsaMimi_v028.zip'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -10,7 +10,7 @@ $packageArgs = @{
   fileType      = 'zip'
   url           = $url
   softwareName  = 'UsaMimi Hurricane*'
-  checksum      = '0223558b918e76c802d02824abad4073ece5673957b5e49fba00ff5f26420223'
+  checksum      = 'b0335a3959753b6411ff998f36ccf39cfef60c9b189b581c49051ead979ad9d6'
   checksumType  = 'sha256'
 
 }
