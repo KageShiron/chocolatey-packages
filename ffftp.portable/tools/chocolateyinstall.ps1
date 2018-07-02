@@ -3,8 +3,8 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'ffftp.portable'
 $toolsDir   = Join-Path (Get-ToolsLocation) $packageName
-$url        = 'https://github.com/sayurin/ffftp/releases/download/v3.4/ffftp-v3.4-x86.zip'
-$url64      = 'https://github.com/sayurin/ffftp/releases/download/v3.4/ffftp-v3.4-x64.zip'
+$url        = 'https://github.com/sayurin/ffftp/releases/download/v3.5/ffftp-v3.5-x86.zip'
+$url64      = 'https://github.com/sayurin/ffftp/releases/download/v3.5/ffftp-v3.5-x64.zip'
 $ErrorActionPreference = 'Stop';
 
 

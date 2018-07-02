@@ -3,8 +3,8 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'ffftp.install'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://github.com/sayurin/ffftp/releases/download/v3.4/ffftp-v3.4-x86.msi'
-$url64      = 'https://github.com/sayurin/ffftp/releases/download/v3.4/ffftp-v3.4-x64.msi'
+$url        = 'https://github.com/sayurin/ffftp/releases/download/v3.5/ffftp-v3.5-x86.msi'
+$url64      = 'https://github.com/sayurin/ffftp/releases/download/v3.5/ffftp-v3.5-x64.msi'
 $ErrorActionPreference = 'Stop';
 
 
