@@ -2,8 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>pandoc-crossref</id>
-    <version>0.4.0.0-alpha3</version>
-    <packageSourceUrl>https://github.com/KageShiron/chocolatey-packages/pandoc-crossref</packageSourceUrl>
+    <version>0.3.4.0</version>
+    <packageSourceUrl>https://github.com/KageShiron/chocolatey-packages/tree/master/pandoc-crossref</packageSourceUrl>
     <owners>KageShiron</owners>
     <title>pandoc-crossref</title>
     <authors>lierdakil</authors>
@@ -16,7 +16,10 @@
     <bugTrackerUrl>https://github.com/lierdakil/pandoc-crossref/issues</bugTrackerUrl>
     <tags>pandoc-crossref admin pandoc latex pdf markdown</tags>
     <summary>pandoc-crossref is a pandoc filter for numbering figures, equations, tables and cross-references to them.</summary>
-    <description><![CDATA[https://github.com/lierdakil/pandoc-crossref
+    <description><![CDATA[
+https://github.com/lierdakil/pandoc-crossref
+
+Only latest release version.
 ]]></description>
     <releaseNotes>https://github.com/lierdakil/pandoc-crossref/releases</releaseNotes>
   </metadata>

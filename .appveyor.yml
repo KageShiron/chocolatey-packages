@@ -56,13 +56,6 @@ init:
 - git config --global core.safecrlf false
 
 install:
-- ps: |
-    $chocoVersion = if (($Env.APPVEYOR_PULL_REQUEST_NUMBER -eq $null) -or ($ENV:APPVEYOR_PULL_REQUEST_NUMBER -eq '')) { $Env:choco_version } else { $Env:choco_version_pr }
-    if (!(Test-Path "$env:nupkg_cache_path")) { mkdir -Force "$env:nupkg_cache_path" }
-    if (!(Test-Path "${env:nupkg_cache_path}\chocolatey.${chocoVersion}.nupkg")) { iwr "https://chocolatey.org/api/v2/package/chocolatey/${chocoVersion}" -OutFile   "${env:nupkg_cache_path}\chocolatey.${chocoVersion}.nupkg" }
-    cup chocolatey --source ${env:nupkg_cache_path} --version $chocoVersion
-    if (!(Test-path "${env:nupkg_cache_path}\wormies-au-helpers.0.2.0.nupkg")) { iwr "https://chocolatey.org/api/v2/package/wormies-au-helpers/0.2.0" -OutFile "${env:nupkg_cache_path}\wormies-au-helpers.0.2.0.nupkg" }
-    cinst wormies-au-helpers --source ${env:nupkg_cache_path} --version 0.2.0 --ignore-dependencies
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
 - ps: $PSVersionTable
 - git --version
@@ -75,22 +68,13 @@ install:
     '  {0,-20} {1}' -f 'SCHEDULED BUILD:', ($Env:APPVEYOR_SCHEDULED_BUILD -eq 'true')
     '  {0,-20} {1}' -f 'FORCED BUILD:'   , ($Env:APPVEYOR_FORCED_BUILD    -eq 'true')
     '  {0,-20} {1}' -f 'RE BUILD:'       , ($Env:APPVEYOR_RE_BUILD        -eq 'true')
+# Uncomment the below line if you are using any of the functions from chocolatey-core.extension - https://chocolatey.org/packages/chocolatey-core.extension. Ensure you also have it listed in your package's dependencies
+# - cinst chocolatey-core.extension
+    
 build_script:
 - ps: |
     $ErrorActionPreference = 'Continue'
-
-    . ./scripts/EventLogs.ps1
-    Clear-EventLogs
-
     if ($Env:APPVEYOR_PROJECT_NAME  -like '*test*') { ./test_all.ps1 "random $Env:au_test_groups"; return }
-    if (($Env:APPVEYOR_PULL_REQUEST_NUMBER -ne $null) -and ($Env:APPVEYOR_PULL_REQUEST_NUMBER -ne '')) {
-      Set-Service wuauserv -StartupType Manual
-      ./scripts/Test-RepoPackage.ps1 -CleanFiles
-      return
-    } else {
-      # Clean the choco logs as it's quite large
-      rm "$env:ChocolateyInstall\logs\*.log"
-    }
     if ( ($Env:APPVEYOR_SCHEDULED_BUILD -ne 'true') -and ($Env:APPVEYOR_FORCED_BUILD -ne 'true') ) {
         switch -regex ($Env:APPVEYOR_REPO_COMMIT_MESSAGE)
         {
@@ -101,32 +85,22 @@ build_script:
                 foreach ($package in $packages) {
                     Write-Host ("{0}`n{1}`n" -f ('-'*60), "PACKAGE: $package")
                     $package_dir = ls -recurse | ? { $_.Name -eq "$package.nuspec"} | select -First 1 | % Directory
-
                     if (!$package_dir) { Write-Warning "Can't find package '$package'"; continue }
                     pushd $package_dir
                       if (Test-Path update.ps1 -ea 0) { ./update.ps1 }
-                      choco pack; Push-Package -All;
+                      choco pack; Push-Package;
                     popd
                 }
                 return
             }
         }
     }
-
     ./update_all.ps1 -ForcedPackages $forced
-    Get-EventLogs * | ? Source -eq 'Schannel' | fl * |  out-file eventlogs.txt
-on_finish:
-- ps: |
-    if (Test-Path $Env:TEMP\chocolatey\au) { 7z a  -mx9 au_temp.7z $Env:TEMP\chocolatey\au\* }
-    $paths = @(
-      Resolve-Path "$env:TEMP\artifacts\*" -ea 0
-      'au_temp.7z'
-      'update_info.xml'
-      'Update-AUPackages.md'
-      'eventlogs.txt'
-    )
-    $paths | ? { Test-Path $_ } | % { Push-AppveyorArtifact $_ }
-#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+    7z a au_temp.zip $Env:TEMP\chocolatey\au\*
+artifacts:
+- path: update_info.xml
+- path: Update-AUPackages.md
+- path: au_temp.zip
 
 notifications:
 - provider: Email
@@ -134,6 +108,3 @@ notifications:
   on_build_success: false
   on_build_failure: true
   on_build_status_changed: true
-
-cache:
-  - '%nupkg_cache_path% -> .appveyor.yml'

@@ -42,5 +42,5 @@ function global:au_SearchReplace {
 
 
 if ($MyInvocation.InvocationName -ne '.') {
-    update -ChecksumFor none
+    update -ChecksumFor all
 }

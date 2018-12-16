@@ -15,8 +15,8 @@ $packageArgs = @{
   url           = $url
   url64           = $url64
   softwareName  = 'FFFTP'
-  checksum      = ''
-  checksum64      = ''
+  checksum      = 'f6e7a5cd331b665d19ff403c4dd5cc3cb337a3278c5f20916faabe1a33070cd3'
+  checksum64      = '8ad46904e4c05305e5be780b51fe01c6d62953b16ce3b4794b60df2bedd5ce3d'
   checksumType  = 'sha256'
 
 

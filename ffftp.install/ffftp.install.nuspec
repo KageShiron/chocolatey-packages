@@ -2,10 +2,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ffftp.install</id>
-    <version>3.5</version>
+    <version>3.5.0.20181216</version>
     <packageSourceUrl>https://github.com/KageShiron/chocolatey-packages/tree/master/ffftp.install</packageSourceUrl>
     <owners>KageShiron</owners>
-    <title>FFFTP</title>
+    <title>FFFTP.install</title>
     <authors>sayurin</authors>
     <projectUrl>https://github.com/sayurin/ffftp</projectUrl>
     <iconUrl>https://cdn.rawgit.com/sayurin/ffftp/master/Resource/icon1.ico</iconUrl>
