@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ffftp</id>
-    <version>3.5</version>
+    <version>3.6</version>
     <packageSourceUrl>https://github.com/KageShiron/chocolatey-packages/tree/master/ffftp</packageSourceUrl>
     <owners>KageShiron</owners>
     <title>FFFTP</title>
@@ -18,7 +18,7 @@
     <tags>FTP FFFTP admin</tags>
     <summary>FTP client software with GUI</summary>
     <dependencies>
-      <dependency id="ffftp.install" version="3.5.0" />
+      <dependency id="ffftp.install" version="3.6" />
     </dependencies>
     <description>FTP client software with GUI.
 Support japanese completely.
