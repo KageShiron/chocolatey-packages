@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ffftp.install</id>
-    <version>3.6</version>
+    <version>3.8</version>
     <packageSourceUrl>https://github.com/KageShiron/chocolatey-packages/tree/master/ffftp.install</packageSourceUrl>
     <owners>KageShiron</owners>
     <title>FFFTP.install</title>
