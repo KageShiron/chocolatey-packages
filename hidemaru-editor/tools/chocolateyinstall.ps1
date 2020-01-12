@@ -12,19 +12,19 @@ if ($null -eq $hmtype) {
 }
 
 $types = @{
-    'url32'       = 'http://hide.maruo.co.jp/software/bin3/hm888_signed.exe'
-    'url32e'      = 'http://hide.maruo.co.jp/software/bin3/maruo888_signed.exe'
-    'url32f'      = 'http://hide.maruo.co.jp/software/bin3/hmfloat888_signed.exe'
-    'url64'       = 'http://hide.maruo.co.jp/software/bin3/hm888_x64_signed.exe'
-    'url64e'      = 'http://hide.maruo.co.jp/software/bin3/maruo888_x64_signed.exe'
-    'url64f'      = 'http://hide.maruo.co.jp/software/bin3/hmfloat888_x64_signed.exe'
+    'url32'       = 'http://hide.maruo.co.jp/software/bin3/hm889_signed.exe'
+    'url32e'      = 'http://hide.maruo.co.jp/software/bin3/maruo889_signed.exe'
+    'url32f'      = 'http://hide.maruo.co.jp/software/bin3/hmfloat889_signed.exe'
+    'url64'       = 'http://hide.maruo.co.jp/software/bin3/hm889_x64_signed.exe'
+    'url64e'      = 'http://hide.maruo.co.jp/software/bin3/maruo889_x64_signed.exe'
+    'url64f'      = 'http://hide.maruo.co.jp/software/bin3/hmfloat889_x64_signed.exe'
     
-    'checksum32'  = '623426c3ed1903c2275c4bae02df56ccd39841102246b748b58b884405304dc7'
-    'checksum32e' = 'ed0b187e6d1a337cc879a179e96783ee599304bd48f71cd3fab23a5e9f7cd232'
-    'checksum32f' = 'aac361ee5e5f059cd8eefd28238467bc071e1f1cefce710a1bcd48b7a7b3f828'
-    'checksum64'  = '4ffd86aef684f1a799dee489db4c92938a720909d400db53f10dd397e1ac93af'
-    'checksum64e' = '7ce91f6f3aaac40b1b513dca116f33cce8e46adf87514af759e592fb9824a937'
-    'checksum64f' = '2607f144c74d22c5d4886dbb645afe37a523466b749bb2512281cf6983316292'
+    'checksum32'  = 'bd230bd68786e63a9725b719aec4e504239843d69a82f4ca43a4a14dbe0be73b'
+    'checksum32e' = '2c7c1442e93d569ebdef3443aa9ae36b26e161251c9ec2ad8429557a682dd036'
+    'checksum32f' = 'b46b5afbe1f1d393b7aa8f7e42675fa90e358f24bd55c403c7e54d26d68d5f58'
+    'checksum64'  = 'a2fc03d2fd92696320f4aaa4f8b27db70c07a05e288d2a998a996bf78cdd22fc'
+    'checksum64e' = '07446a0d3b308f008dcc80fee7ab928c9112d28a15d8503762e90b89135d2dee'
+    'checksum64f' = '8696b72b655d6241ccd490b751d14f45034817a0af2901455860a2250f5dd305'
 }
 
 $url = $types["url" + $hmtype]
