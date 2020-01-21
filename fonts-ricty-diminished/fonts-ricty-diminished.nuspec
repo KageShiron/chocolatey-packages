@@ -37,7 +37,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <title>Ricty Diminished</title>
     <authors>Raph Levien,itouhiro,M+ FONTS PROJECT,Yasunori Yusa</authors>
     <!-- projectUrl is required for the community feed -->
-    <projectUrl>http://www.rs.tus.ac.jp/yyusa/ricty_diminished.html</projectUrl>
+    <projectUrl>http://www.yusa.lab.uec.ac.jp/~yusa/ricty_diminished.html</projectUrl>
     <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/fonts-ricty-diminished.png</iconUrl>-->
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is is required for the community feed -->
