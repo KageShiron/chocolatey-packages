@@ -1,49 +1,37 @@
-﻿
-$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop';
 
-$packageName = 'SakuraEditor'
-$url1 = 'http://sourceforge.net/projects/sakura-editor/files/sakura2-installer/2.2.0.1/sakura_install2-2-0-1.exe?big_mirror=0'
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-
+$packageName= 'SakuraEditor'
+$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url = 'https://github.com/sakura-editor/sakura/releases/download/v2.4.1/sakura-tag-v2.4.1-build2849-ee8234f-Win32-Release-Installer.zip'
+$checksum = '3fcc813bbb2a7c51d4b95bd081643c0dc7dedc632cdb396e6ea56e82ebb5315f'
 
 $pp = Get-PackageParameters
 $pp | Format-Table | Out-String
 
-$silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
-
-if ( $null -ne $pp["tasks"]) {
-    $silentArgs += " /TASKS=$($pp["tasks"])"
+$packageArgsZip = @{
+    packageName   = $packageName
+    url           = $url
+    checksum      = $checksum
+    checksumType  = 'sha256'
+    UnzipLocation = $toolsDir
 }
 
-echo "SilentArgs : ${silentArgs}"
+$silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+Install-ChocolateyZipPackage @packageArgsZip
 
 $packageArgs = @{
     packageName    = $packageName
     fileType       = 'exe'
     url            = $url1
     softwareName   = 'Sakura Editor*'
-    checksum       = 'C5950B0ACAFA906200E1EDDC4E43072BBD1F04457B395287BB0135202504994B'
-    checksumType   = 'sha256'
     silentArgs     = $silentArgs
     validExitCodes = @(0)
 }
+$file = Join-Path $toolsDir "*.exe"
+Install-ChocolateyInstallPackage -PackageName $packageName -File $file -SilentArgs $silentArgs
 
-$url2 = 'https://sourceforge.net/projects/sakura-editor/files/sakura2/2.3.2.0/sakura2-3-2-0.zip/download'
-$checksum2 = 'f767b65096c96decb1540a7b95ef07b8dc77e08732d8af12a3fdc84e4137f2b0'
 
-$packageArgs2 = @{
-    packageName   = $packageName
-    url           = $url2
-    softwareName  = 'sakura editor*'
-    checksum      = $checksum2
-    checksumType  = 'sha256'
-    UnzipLocation = $toolsDir
-}
 
-Install-ChocolateyZipPackage @packageArgs2
-Install-ChocolateyPackage @packageArgs
 
-$info = (Get-InstallRegistryKey "sakura editor*").InstallLocation
-Move-Item -Force $toolsDir\*\sakura.exe $info
 
-ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { Set-Content -Value "" -Path "$_.ignore" }}
+Write-ChocolateySuccess "$packageName"

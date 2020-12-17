@@ -12,19 +12,19 @@ if ($null -eq $hmtype) {
 }
 
 $types = @{
-    'url32'       = 'http://hide.maruo.co.jp/software/bin3/hm888_signed.exe'
+    'url32'       = 'http://hide.maruo.co.jp/software/bin3/hm895_signed.exe'
     'url32e'      = 'http://hide.maruo.co.jp/software/bin3/maruo888_signed.exe'
-    'url32f'      = 'http://hide.maruo.co.jp/software/bin3/hmfloat888_signed.exe'
-    'url64'       = 'http://hide.maruo.co.jp/software/bin3/hm888_x64_signed.exe'
+    'url32f'      = 'http://hide.maruo.co.jp/software/bin3/hmfloat895_signed.exe'
+    'url64'       = 'http://hide.maruo.co.jp/software/bin3/hm895_x64_signed.exe'
     'url64e'      = 'http://hide.maruo.co.jp/software/bin3/maruo888_x64_signed.exe'
-    'url64f'      = 'http://hide.maruo.co.jp/software/bin3/hmfloat888_x64_signed.exe'
+    'url64f'      = 'http://hide.maruo.co.jp/software/bin3/hmfloat895_x64_signed.exe'
     
-    'checksum32'  = '623426c3ed1903c2275c4bae02df56ccd39841102246b748b58b884405304dc7'
+    'checksum32'  = '2c02b7a0aa9ac9107845bc37875397d470a4f38c6bda7f191b56fd81a0fa8e50'
     'checksum32e' = 'ed0b187e6d1a337cc879a179e96783ee599304bd48f71cd3fab23a5e9f7cd232'
-    'checksum32f' = 'aac361ee5e5f059cd8eefd28238467bc071e1f1cefce710a1bcd48b7a7b3f828'
-    'checksum64'  = '4ffd86aef684f1a799dee489db4c92938a720909d400db53f10dd397e1ac93af'
+    'checksum32f' = '313d5ee638ab1f8f255d1b4938b2263c8dba2744c5646e2a1d400cfa65f8f8e5'
+    'checksum64'  = 'a64cac6a96ce06c90b1ecba4743421d0371c1450c60a6f88043a058e052784e6'
     'checksum64e' = '7ce91f6f3aaac40b1b513dca116f33cce8e46adf87514af759e592fb9824a937'
-    'checksum64f' = '2607f144c74d22c5d4886dbb645afe37a523466b749bb2512281cf6983316292'
+    'checksum64f' = 'f6af2aaed87e2744b9f32c0f0965d04ab676c72e41ac66a509ff75a3c5bf9c12'
 }
 
 $url = $types["url" + $hmtype]

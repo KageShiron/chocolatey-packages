@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>sakuraeditor</id>
-    <version>2.3.2.0</version>
+    <version>2.4.1</version>
     <packageSourceUrl>https://github.com/KageShiron/chocolatey-packages/tree/master/sakuraeditor</packageSourceUrl>
     <owners>KageShiron</owners>
     <title>Sakura Editor</title>
@@ -15,7 +15,15 @@
     <docsUrl>http://sakura-editor.sourceforge.net/</docsUrl>
     <tags>sakuraeditor admin sakura editor texteditor japanese</tags>
     <summary>A free Japanese text editor for Windows</summary>
-    <description><![CDATA[A free Japanese text editor for Windows (Unicode Edition).
+    <description><![CDATA[サクラエディタ
+
+## About icon.ico
+under zlib/libpng License
+https://sourceforge.net/p/sakura-editor/code/HEAD/tree/sakura/trunk2/resource/icon_std.ico
+
+See also : http://sakura.qp.land.to/?Develop%2FLicenses
+##### 10 #####
+A free Japanese text editor for Windows (Unicode Edition).
 
 **Package Installer Version** 2.2.0.1
 

@@ -1,31 +1,36 @@
-$releases = "https://sourceforge.net/projects/sakura-editor/files/sakura2/"
+import-module au
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $a = ($download_page.links | where { $_.href -match "/projects/sakura-editor/files/sakura2/.*?" } | select -first 1)
-    $regex = [regex]"/projects/sakura-editor/files/sakura2/(.*?)/"
-    $version = $regex.Match( $a.href ).Groups[1]
-    $url = "https://sourceforge.net/projects/sakura-editor/files/sakura2/${version}/sakura$($version -replace "\.","-").zip/download"
-
+    $url=""
+    $rel = (Invoke-WebRequest https://api.github.com/repos/sakura-editor/sakura/releases/latest -UseBasicParsing | ConvertFrom-Json);
+    Write-Host $rel.name
+    foreach( $ast in $rel.assets ){
+        if( $ast.name.EndsWith("-Release-Installer.zip")) { $url = $ast.browser_download_url }
+    }
     return @{ 
-        Version        = $version;
-        URL32          = $url;
+        Version = ($rel.name -replace "v","")
+        URL32 = $url;
         ChecksumType32 = 'sha256'
     }
 }
 
+
+function global:au_BeforeUpdate() {
+    $Latest.Checksum32 = Get-RemoteChecksum $Latest.Url32
+ }
+
 function global:au_SearchReplace {
     @{
         "tools\chocolateyInstall.ps1" = @{
-            "(^[$]url2\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"           #1
-            "(^[$]checksum2\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"      #2
+            "(^[$]url\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"           #1
+            "(?i)(^\s*[$]checksum\s*=\s*)'.*'"   = "`$1'$($Latest.Checksum32)'"      #2
         }
     }
 }
 
-function global:au_AfterUpdate ($Package)  {
-    Set-DescriptionFromReadme $Package -SkipFirst 10
+
+if ($MyInvocation.InvocationName -ne '.') {
+    update -ChecksumFor all
 }
 
-
-update
+Update-Package

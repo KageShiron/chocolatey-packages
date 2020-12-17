@@ -4,9 +4,11 @@ function global:au_GetLatest {
     $infopage = Invoke-WebRequest -Uri $infopage_url
     $releases = 'http://www.vector.co.jp' + ($infopage.links | ? class -eq "btn download" | select -First 1 -expand href )
 
+
     $download_page = Invoke-WebRequest -Uri $releases
-    $regex   = 'http://ftp.vector.co.jp/.*?\.zip$'
+    $regex   = 'https://ftp.vector.co.jp/.*?\.zip$'
     $url     =  ($download_page.links | ? href -match $regex | select -First 1 -expand href)
+    write-host $url
     
     
     $download_page.RawContentStream.Position = 0

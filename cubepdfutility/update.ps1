@@ -1,13 +1,29 @@
+import-module au
 
 function global:au_GetLatest {
-    $version = (Invoke-WebRequest https://api.github.com/repos/cube-soft/CubePdfUtility2/tags -UseBasicParsing | ConvertFrom-Json)[0].name
-    return @{ 
-        Version = $version;
-        URL32 = "http://www.cube-soft.jp/cubepdfutility/dl.php?mode=x86";
-        URL64 = "http://www.cube-soft.jp/cubepdfutility/dl.php?mode=x64"
-        ChecksumType32 = 'sha256'
+    $x86 = "";
+    $x64 = "";
+    $rels = (Invoke-WebRequest https://api.github.com/repos/cube-soft/Cube.Pdf/releases -UseBasicParsing | ConvertFrom-Json);
+    foreach( $rel in $rels){
+        if( $rel.name -notmatch "^CubePDF Utility \d") {continue}
+        foreach( $ast in $rel.assets ){
+            if( $ast.name.EndsWith("-x64.exe")) { $x64 = $ast.browser_download_url }
+            elseif( $ast.name.EndsWith(".exe")) { $x86 = $ast.browser_download_url }
+        }
+        return @{ 
+            Version = ($rel.name -replace "CubePDF Utility ","" -replace " beta","")
+            URL32 = $x86;
+            URL64 = $x64;
+            ChecksumType32 = 'sha256'
+        }
     }
+
 }
+
+function global:au_BeforeUpdate() {
+    $Latest.Checksum32 = Get-RemoteChecksum $Latest.Url32
+    $Latest.Checksum64 = Get-RemoteChecksum $Latest.Url64
+ }
 
 function global:au_SearchReplace {
     @{
@@ -20,5 +36,9 @@ function global:au_SearchReplace {
     }
 }
 
+
+if ($MyInvocation.InvocationName -ne '.') {
+    update -ChecksumFor all
+}
 
 Update-Package

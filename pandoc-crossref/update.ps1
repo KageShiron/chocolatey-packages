@@ -5,7 +5,7 @@ $releases = "https://api.github.com/repos/lierdakil/pandoc-crossref/releases/lat
 function global:au_GetLatest {
     $json = (Invoke-WebRequest $releases -UseBasicParsing | ConvertFrom-Json);
     foreach ( $asset in $json.assets) {
-        if ($asset.name -match "windows-.*?.zip") { 
+        if ($asset.name -eq "pandoc-crossref-Windows.7z") { 
             echo $asset.browser_download_url;
             return @{ 
                 Version        = $json.tag_name -replace "v" , "";
@@ -14,6 +14,11 @@ function global:au_GetLatest {
             }
         }
     }
+}
+
+function global:au_BeforeUpdate { Get-RemoteFiles }
+function global:au_AfterUpdate ($Package)  {
+     Set-DescriptionFromReadme $Package -SkipFirst 1
 }
 
 function global:au_SearchReplace {

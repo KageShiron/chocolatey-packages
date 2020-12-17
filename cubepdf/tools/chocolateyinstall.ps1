@@ -3,8 +3,8 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'cubepdf'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://www.cube-soft.jp/cubepdf/dl.php?mode=x86'
-$url64      = 'http://www.cube-soft.jp/cubepdf/dl.php?mode=x64'
+$url        = 'https://github.com/cube-soft/Cube.Pdf/releases/download/3.0.0/cubepdf-1.2.0.exe'
+$url64      = 'https://github.com/cube-soft/Cube.Pdf/releases/download/3.0.0/cubepdf-1.2.0-x64.exe'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -15,9 +15,9 @@ $packageArgs = @{
 
   softwareName  = 'cubepdf*'
 
-  checksum      = 'd4e17b2b3c0329f5974c8875bcf3876ddfeb4dc0c46390bf45845e95c1437dd0'
+  checksum      = 'd536f9648955a107aa7d8b9b30e94ae361ab69db26994a4ed4c3f9af79a0341f'
   checksumType  = 'sha256'
-  checksum64    = 'cfd94f0afef98f2c76010cb05c8b98e95298566d5301c3f48e58888b2eff688d'
+  checksum64    = 'e5451ef053c929a1f6d2dcde4e57e649669d52afa890a775f1f2846801663b2e'
   checksumType64= 'sha256'
 
   silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'

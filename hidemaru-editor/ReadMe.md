@@ -50,12 +50,12 @@ Example(例):
 * **name** License user name
 * **exit** Exit all instances of Hidemaru Editor.
 
-You can choose a version of Hidemaru Editor.(ビット数と言語を`/type:32`のように指定できます。)
+You can choose a edition of Hidemaru Editor.(ビット数と浮動小数点版を選択できます)
 
 * **type** install type
   * **32** (defualt) 32bit version
-  * **32e** 32bit English version
   * **32f** 32bit float version
   * **64**  64bit version
-  * **64e** 64bit English version
   * **64f** 64bit float version
+
+**English Edition has been merged into normal edition**
