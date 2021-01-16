@@ -22,7 +22,7 @@ function global:au_GetLatest {
     }
 }
 
-function au_BeforeUpdate() {
+function global:au_BeforeUpdate() {
     $Latest.Checksum32zip = Get-RemoteChecksum $Latest.Url32zip
     $Latest.Checksum64zip = Get-RemoteChecksum $Latest.Url64zip
     $Latest.Checksum32msi = Get-RemoteChecksum $Latest.Url32msi
@@ -41,6 +41,8 @@ function global:au_SearchReplace {
 }
 
 
-if ($MyInvocation.InvocationName -ne '.') {
-    update -ChecksumFor all
-}
+# if ($MyInvocation.InvocationName -ne '.') {
+#     update -ChecksumFor all
+# }
+
+update -ChecksumFor none

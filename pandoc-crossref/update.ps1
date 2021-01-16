@@ -8,7 +8,7 @@ function global:au_GetLatest {
         if ($asset.name -eq "pandoc-crossref-Windows.7z") { 
             echo $asset.browser_download_url;
             return @{ 
-                Version        = $json.tag_name -replace "v" , "";
+                Version        = $json.tag_name -replace "v" , "" -replace "a",""; # v0.3.9.0a→0.3.9.0
                 URL32          = $asset.browser_download_url;
                 ChecksumType32 = 'sha256'
             }
@@ -31,4 +31,4 @@ function global:au_SearchReplace {
 }
 
 
-Update-Package -ChecksumFor 32
+Update-Package -ChecksumFor none

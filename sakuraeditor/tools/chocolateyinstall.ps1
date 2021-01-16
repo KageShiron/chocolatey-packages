@@ -27,7 +27,7 @@ $packageArgs = @{
     silentArgs     = $silentArgs
     validExitCodes = @(0)
 }
-$file = Join-Path $toolsDir "*.exe"
+$file = [String](Resolve-Path( Join-Path $toolsDir "*.exe"))
 Install-ChocolateyInstallPackage -PackageName $packageName -File $file -SilentArgs $silentArgs
 
 

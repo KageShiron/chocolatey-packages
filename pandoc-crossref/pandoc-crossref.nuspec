@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>pandoc-crossref</id>
-    <version>0.3.8.4</version>
+    <version>0.3.9.0</version>
     <packageSourceUrl>https://github.com/KageShiron/chocolatey-packages/tree/master/pandoc-crossref</packageSourceUrl>
     <owners>KageShiron</owners>
     <title>pandoc-crossref</title>
