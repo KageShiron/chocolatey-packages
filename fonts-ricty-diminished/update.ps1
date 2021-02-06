@@ -4,7 +4,7 @@ function global:au_GetLatest {
      $download_page = Invoke-WebRequest -Uri $releases
      $regex   = '.tar.gz$'
      $verregex= [regex]'ricty_diminished/ricty_diminished-(.*?)\.tar.gz'
-     $url     = "http://www.rs.tus.ac.jp/yyusa/" + ($download_page.links | ? href -match $regex | select -First 1 -expand href)
+     $url     = "http://www.yusa.lab.uec.ac.jp/~yusa/" + ($download_page.links | ? href -match $regex | select -First 1 -expand href)
      $version = $verregex.Match( $url ).Groups[1]
      return @{ 
         Version = $version;
